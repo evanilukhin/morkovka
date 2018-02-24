@@ -41,7 +41,11 @@ defmodule Morkovka.Mixfile do
       {:gettext, "~> 0.11"},
       {:poison, "~> 3.1"},
       {:jason, "~> 1.0"},
-      {:cowboy, "~> 2.1", override: true}
+      {:cowboy, "~> 2.1", override: true},
+      {:httpoison, "~> 1.0"},
+      {:phoenix_slime, "~> 0.9.0"},
+      {:cors_plug, "~> 1.5"},
+      {:credo, "~> 0.9.0-rc1", only: [:dev, :test], runtime: false}
     ]
   end
 

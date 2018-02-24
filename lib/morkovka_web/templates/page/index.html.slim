@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title = site_title
+  body
+    .inputs
+      = hidden_input(:index, :photos_url, [class: "js-photos-url", value: photos_url(MorkovkaWeb.Endpoint, :index)])
+      input.js-query-field type="text"
+      input.js-button-send type="button" value="Find"
+    .js-images-container
+    input.js-button-more type="button" value="More"

@@ -7,7 +7,7 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
 config :morkovka, MorkovkaWeb.Endpoint,
-  https: [port: 4000, keyfile: "priv/morkovka_server.key", certfile: "priv/morkovka_server.pem"],
+  http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -37,7 +37,7 @@ config :morkovka, MorkovkaWeb.Endpoint,
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
       ~r{lib/morkovka_web/views/.*(ex)$},
-      ~r{lib/morkovka_web/templates/.*(eex)$}
+      ~r{lib/morkovka_web/templates/.*(eex|slim|slime)$}
     ]
   ]
 
@@ -56,3 +56,5 @@ config :phoenix, :stacktrace_depth, 20
 #   database: "morkovka_dev",
 #   hostname: "localhost",
 #   pool_size: 10
+
+import_config "dev.secret.exs"

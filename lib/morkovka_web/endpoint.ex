@@ -38,6 +38,7 @@ defmodule MorkovkaWeb.Endpoint do
     key: "_morkovka_key",
     signing_salt: "3xPRrGve"
 
+  plug CORSPlug  
   plug MorkovkaWeb.Router
 
   @doc """

@@ -19,6 +19,12 @@ defmodule MorkovkaWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/api", MorkovkaWeb do
+    pipe_through :api # Use the default browser stack
+
+    get "/photos", PhotosController, :index
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", MorkovkaWeb do
   #   pipe_through :api
