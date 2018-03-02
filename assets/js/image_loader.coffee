@@ -9,8 +9,8 @@ $ ->
 
   image_container = (image) ->
     htmlToElement "<div class='image-container preview'>
-                    <a href=#{image.photo_807}>
-                      <img class='preview' src=#{image.photo_604}>
+                    <a href=#{image.full_image_link}>
+                      <img class='preview' src=#{image.preview_image_link}>
                     </a>
                   </div>"
   append_image = (image) ->
@@ -31,7 +31,7 @@ $ ->
           fill_page(data)
     return
   $(".js-button-more").on "click", ->
-    $offset+=10
+    $offset += $count
     $('.js-images-container').empty()
     $q = $(".js-query-field").val()
     load_images($q, $count)
